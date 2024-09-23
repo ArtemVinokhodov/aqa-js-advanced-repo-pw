@@ -1,8 +1,11 @@
 // playwright.config.js
+const { defineConfig } = require('@playwright/test');
 
-module.exports = {
+module.exports = defineConfig({
+    timeout: 30000,
     use: {
-      browserName: 'chromium',
+        headless: false,
+        browserName: 'chromium',
     },
-  };
-  
+    reporter: 'html',
+});

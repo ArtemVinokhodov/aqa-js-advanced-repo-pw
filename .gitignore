@@ -1,13 +1,22 @@
-# Игнорировать системные файлы и временные файлы
-*.log
-*.tmp
-.DS_Store
-Thumbs.db
-
-# Игнорировать папку node_modules
+# Node.js
 node_modules/
+package-lock.json
 
-# Игнорировать другие временные файлы и папки
-.vscode/
-.idea/
+# Playwright
+test-results/
+playwright-report/
+trace-storage/
 
+# Environment variables
+.env
+
+# OS-specific
+.DS_Store  # для macOS
+Thumbs.db  # для Windows
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

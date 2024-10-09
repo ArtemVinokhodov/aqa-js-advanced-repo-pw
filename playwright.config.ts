@@ -1,4 +1,6 @@
 import { defineConfig } from '@playwright/test';
+import * as dotenv from 'dotenv';
+dotenv.config({ path: './path/to/your/.env' });
 
 export default defineConfig({
   testDir: './tests',
@@ -6,7 +8,11 @@ export default defineConfig({
   use: {
     headless: false,
     viewport: { width: 1280, height: 720 },
-    baseURL: 'https://guest:welcome2qauto@qauto.forstudy.space/',
+    baseURL: process.env.BASE_URL,
+    httpCredentials: {
+      username: process.env.HTTP_CREDENTIALS_USERNAME || 'test',
+      password: process.env.HTTP_CREDENTIALS_PASSWORD || 'test',
+    },
     video: 'retain-on-failure',
   },
   projects: [

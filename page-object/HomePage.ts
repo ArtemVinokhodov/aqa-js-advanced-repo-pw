@@ -12,7 +12,7 @@ export class HomePage {
     }
 
     async openMainPage() {
-        await this.page.goto('');
+        await this.page.goto(process.env.BASE_URL || '/');
     }
 
     async openSignInForm() {

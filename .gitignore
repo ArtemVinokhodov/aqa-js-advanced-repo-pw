@@ -8,7 +8,7 @@ playwright-report/
 trace-storage/
 
 # Environment variables
-.env
+#.env
 
 # OS-specific
 .DS_Store  # для macOS
